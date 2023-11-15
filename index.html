@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Predictor</h1>
+        <form method="POST">
+            <label for="city">Enter city name:</label>
+            <input type="text" name="city" required>
+            <input type="submit" value="Get Weather">
+        </form>
+
+        {% if city %}
+            <h2>Weather in {{ city }}:</h2>
+            <p>Weather: {{ weather }}</p>
+            <p>Temperature: {{ temperature }}°C</p>
+            <p>Humidity: {{ humidity }}%</p>
+        {% endif %}
+    </div>
+</body>
+</html>
